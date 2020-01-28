@@ -9,10 +9,10 @@ public:
 
 private:
 
-    void AddNext(*Node next);
+    void AddNext(Node* next);
 
     int value;
-    *Node next;
+    Node* next;
 
 
 };
