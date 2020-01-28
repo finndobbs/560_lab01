@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
 #include <string>
 
 class LinkedList{
@@ -16,4 +19,5 @@ public:
     std::string ReverseList();
     std::string PrintAt(x);
     void Exit();
-}
+};
+#endif
