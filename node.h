@@ -7,13 +7,12 @@ public:
 
     ~Node();
 
-private:
-
     void AddNext(Node* next);
+
+private:
 
     int value;
     Node* next;
-
 
 };
 
