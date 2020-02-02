@@ -10,14 +10,18 @@ public:
 
     void IsEmpty();
     void Length();
-    void Insert(x);
-    void Delete(x);
+    void Insert(int x);
+    void Delete(int x);
     void DeleteDuplicates();
-    int  Find(x);
-    int  FindNext(x);
+    int  Find(int x);
+    int  FindNext(int x);
     std::string Print();
     std::string ReverseList();
-    std::string PrintAt(x);
+    std::string PrintAt(int x);
     void Exit();
+
+private: 
+    Node* front;
+    int size;
 };
 #endif
