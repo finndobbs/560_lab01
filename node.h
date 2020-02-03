@@ -9,6 +9,10 @@ public:
 
     void AddNext(Node* next);
 
+    Node* GetNext();
+
+    int GetValue();
+
 private:
 
     int value;

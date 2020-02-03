@@ -1,6 +1,7 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
+#include "node.h"
 #include <string>
 
 class LinkedList{
@@ -10,7 +11,7 @@ public:
 
     void IsEmpty();
     void Length();
-    void Insert(int x);
+    bool Insert(int x);
     void Delete(int x);
     void DeleteDuplicates();
     int  Find(int x);
@@ -20,8 +21,13 @@ public:
     std::string PrintAt(int x);
     void Exit();
 
+    bool Insert_init(int x);
+    void PrintList();
+    std::string printHelper(Node *node);
+
 private: 
-    Node* front;
+    Node * front;
+    Node * back;
     int size;
 };
 #endif
