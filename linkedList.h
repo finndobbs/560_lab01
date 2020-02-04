@@ -13,7 +13,7 @@ public:
     int  Length();
     bool Insert(int x);
     void Delete(int x);
-    LinkedList DeleteDuplicates();
+    LinkedList* DeleteDuplicates();
     bool Find(int x);
     void FindNext(int x);
     void Print();
