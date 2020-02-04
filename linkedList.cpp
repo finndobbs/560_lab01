@@ -54,7 +54,25 @@ bool LinkedList::Insert(int x){
     return false;
 }
 
-void LinkedList::Delete(int x){}
+void LinkedList::Delete(int x){
+    Node *last_occurence = NULL;
+    Node *before_last_occurence = NULL;
+    Node *temp = this->front;
+    Node *before_temp = NULL;
+
+    while (temp->GetNext() != NULL){
+        if(temp->GetNext()->GetValue() == x){
+            last_occurence = temp->GetNext();
+            before_last_occurence = temp;
+        }
+        temp = temp->GetNext();
+    }
+    if (last_occurence != NULL){
+        before_last_occurence->AddNext(last_occurence->GetNext());
+        this->size -= 1;
+    }
+}
+
 LinkedList LinkedList::DeleteDuplicates(){}
 bool LinkedList::Find(int x){}
 void LinkedList::FindNext(int x){}
