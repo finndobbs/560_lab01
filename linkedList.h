@@ -9,20 +9,19 @@ public:
     LinkedList();
     ~LinkedList();
 
-    void IsEmpty();
-    void Length();
+    bool IsEmpty();
+    int  Length();
     bool Insert(int x);
     void Delete(int x);
-    void DeleteDuplicates();
-    int  Find(int x);
-    int  FindNext(int x);
-    std::string Print();
-    std::string ReverseList();
-    std::string PrintAt(int x);
+    LinkedList DeleteDuplicates();
+    bool Find(int x);
+    void FindNext(int x);
+    void Print();
+    void ReverseList();
+    void PrintAt(int x);
     void Exit();
 
     bool Insert_init(int x);
-    void PrintList();
     std::string printHelper(Node *node);
 
 private: 
