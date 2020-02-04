@@ -73,8 +73,31 @@ void LinkedList::Delete(int x){
     }
 }
 
-LinkedList LinkedList::DeleteDuplicates(){}
-bool LinkedList::Find(int x){}
+LinkedList LinkedList::DeleteDuplicates(){
+    LinkedList *newList = new LinkedList();
+
+    Node *temp = this->front;
+
+    while (temp->GetNext() != NULL){
+        if (temp->GetValue()){
+
+        } 
+    }
+}
+bool LinkedList::Find(int x){
+    Node *temp = this->front;
+
+    while (true){
+        if (temp->GetValue() == x){
+            return true;
+        } else if (temp->GetNext() == NULL){
+            return false;
+        }
+        temp = temp->GetNext();
+    }
+    std::cout << "This Should Never Print.";
+}
+
 void LinkedList::FindNext(int x){}
 void LinkedList::ReverseList(){}
 void LinkedList::PrintAt(int x){}
