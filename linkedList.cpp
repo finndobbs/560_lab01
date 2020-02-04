@@ -104,12 +104,26 @@ bool LinkedList::Find(int x){
     }
 }
 
-void LinkedList::FindNext(int x){}
+void LinkedList::FindNext(int x){
+
+    if (this->Find(x)){
+        Node *temp = this->front;
+        while (temp->GetNext() != NULL){
+            if (temp->GetNext()->GetValue() == x && temp->GetNext()->GetNext() != NULL){
+                std::cout << temp->GetNext()->GetNext()->GetValue() << std::endl;
+                break;
+            }
+            temp = temp->GetNext();
+        }
+    }else {
+        std::cout << "None";
+    }
+}
 void LinkedList::ReverseList(){}
 void LinkedList::PrintAt(int x){}
 void LinkedList::Exit(){}
 void LinkedList::Print(){
-   std::cout << printHelper(this->front); 
+   std::cout << printHelper(this->front) << std::endl; 
 }
 //////////////////////
 // Non-user Methods //
